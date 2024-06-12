@@ -1,0 +1,19 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Learning Node JS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "server": "nodemon src/server.js"
+  },
+  "author": "Ranjith",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1",
+    "nodemon": "^3.1.3"
+  },
+  "type":"module"
+}
