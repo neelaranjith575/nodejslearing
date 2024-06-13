@@ -27,6 +27,6 @@ const employeeDataSchema = new mongoose.Schema(
 
     }
 );
-const employeeData = mongoose.model('EmployeeData', employeeDataSchema)
+const employeeData = mongoose.model('employeeData', employeeDataSchema)
 
 export default employeeData ;
