@@ -10,13 +10,11 @@ app.use(express.json());
 
 
 
-console.log('Mongoose', process.env.MONGODB_URL);
+// console.log('Mongoose', process.env.MONGODB_URL);
 // Connect to MongoDB
-mongoose
-  .connect(process.env.MONGODB_URL, {
+mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    // Remove the deprecated option
   })
   .then(() => {
     console.log('Connected to MongoDB');
@@ -29,16 +27,14 @@ mongoose
 
   
 // Routes
-app.use('/api/employees', employeeRoutes);
-// app.use('/api/create/employee', employeeData);
-// app.use('/api/employee/:roll/update', employeeData);
-// app.use('/api/employee/:roll/delete', employeeData);
+app.use('/api/employee', employeeRoutes);
+
 
 
 
 
 // Start server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

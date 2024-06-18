@@ -4,10 +4,11 @@ import * as employeeDataController from "../controllers/employeeData.controller.
 const router = express.Router();
 
 
-router.get ('/employees' , employeeDataController.getemployeesData);
-router.post('/create/employee', employeeDataController.createEmployeeData);
-router.put('/employee/:employeeID/update', employeeDataController.updateEmployeeData);
-router.delete('/employee/:employeeID/delete', employeeDataController.deleteEmployeeData);
+router.get ('/' , employeeDataController.getemployeesData);
+router.post('/create', employeeDataController.createEmployeeData);
+router.get('/:id/details', employeeDataController.getEmployeeByID);
+router.put('/:id/update', employeeDataController.updateEmployeeData);
+router.delete('/:id/delete', employeeDataController.deleteEmployeeData);
 
 
 export default router;
